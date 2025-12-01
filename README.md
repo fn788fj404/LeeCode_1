@@ -2,5 +2,5 @@
 NA
 
 
-## coompile
+## compile
 - cmake --build . --config Debug
