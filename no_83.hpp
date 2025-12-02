@@ -19,12 +19,13 @@ public:
     ListNode *deleteDuplicates(ListNode *head)
     {
         // [1,1,2,3,3]
+        // 【1，1，1】
         ListNode *tail = head;
 
         while (tail)
         {
             if (tail->next == nullptr)
-                return head;
+                break;
 
             if (tail->val == tail->next->val)
             {
@@ -32,7 +33,8 @@ public:
             }
             else
             {
-                tail->next = tail->next;
+
+                tail = tail->next;
             }
         }
 
